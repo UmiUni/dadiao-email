@@ -9,7 +9,7 @@ class EmailSender:
     _content = None
 
     def __init__(self, host_email, password):
-        yagmail.register(email, password)
+        yagmail.register(host_email, password)
         self._yag = yagmail.SMTP(host_email)
         self._host = host_email
         self._subject = "What the fuck!"
@@ -30,7 +30,7 @@ class EmailSender:
 ## Usage:
 if __name__ == "__main__":
     host_email = "zeboli1@illinois.edu"
-    password = "12345678"
+    password = "12345"
     sender = EmailSender(host_email, password)
     subject = "Da diao"
     content = "Da diao"
